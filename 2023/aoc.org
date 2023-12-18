@@ -1,0 +1,79 @@
+* INTRODUCTION
+
+Code for Advent of Code 2023. This will be done in COBOL and using the
+noweb approach to Literate Programming, through emacs org-mode.
+
+* LIFECYCLE
+
+   # tangle, build and run
+   [[elisp:(save-window-excursion (org-babel-tangle) (compile "cobc -x -free aoc.cob && ./aoc"))][<DWIM>]]
+
+   # individual steps
+   [[elisp:(save-window-excursion (org-babel-tangle))][<Tangle>]]
+   [[elisp: (compile "cobc -x -free aoc.cob")][<Build>]]
+   [[elisp: (compile "./aoc")][<Run>]]
+
+
+* CODE
+
+** Application
+
+#+NAME: *
+#+begin_src cobol
+  >>SOURCE FORMAT FREE
+
+  IDENTIFICATION DIVISION.
+      <<identification division>>
+
+  ENVIRONMENT DIVISION.
+      <<environment division>>
+
+  DATA DIVISION.
+      <<data division>>
+
+  PROCEDURE DIVISION.
+      <<procedure division>>
+#+end_src
+
+#+NAME: identification division
+#+begin_src cobol
+  PROGRAM-ID. AOC23.
+  AUTHOR. Christian Lynbech
+  DATE-WRITTEN. December 2023.
+#+end_src
+
+** Day 1
+
+* RESOURCES                                  :noexport:
+
+** Web resources
+
+https://www.mainframestechhelp.com/tutorials/cobol/introduction.htm
+
+https://ocamlpro.github.io/cobol-cheat-sheets/gnucobol-cs.pdf
+
+https://www.programming-idioms.org/cheatsheet/Cobol
+
+https://github.com/GyuoMi/AdventOfCode2023/blob/main/cheatsheet.cbl
+
+** org-mode snippets
+
+#+begin_src cobol :tangle yes
+
+#+end_src
+
+
+#+begin_src shell :results value verbatim
+
+#+end_src
+
+
+#+begin_src shell results output silent
+
+#+end_src
+
+* CONFIG                                     :noexport:
+
+#+STARTUP: showall
+
+# ### aoc.org ends here.
